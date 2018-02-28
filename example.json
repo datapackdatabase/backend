@@ -1,0 +1,21 @@
+{
+    "name":"Example Pack",
+	"description":"A sUpEr FuN dAtApAcK",
+	"author":"Who Knows?",
+	"pack_version": "0.0.0",
+	"minecraft_version": "1.13",
+	
+	"models": [
+	    {
+		    "id":"some_tool",
+			
+			"model":"location/item",
+			"damage": 1,
+			"keepObjectAttributes": false,
+			"blacklist": false,
+	        "types": [
+			    "minecraft:diamond_hoe"
+            ]
+        }
+    ]
+}
