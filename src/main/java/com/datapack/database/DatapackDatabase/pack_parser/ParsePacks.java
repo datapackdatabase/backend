@@ -13,7 +13,11 @@ public class ParsePacks {
 	 * @param read Array of datapack file locations.
 	 * @return File location of merged datapacks.
 	 */
-	public static File parsePacks(File[] read) {
+	public static File parsePacks(String[] files) {
+		File[] read = new File[files.length];
+		for(int i = 0; i < files.length; i++) {
+			read[i] = new File(files[i]);
+		}
 		Datapack[] packs = new Datapack[read.length];
 		//read JSON of each datapack
 		for(int e = 0; e < read.length; e++) {
