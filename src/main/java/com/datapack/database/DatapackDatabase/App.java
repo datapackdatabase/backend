@@ -9,12 +9,22 @@ public class App {
 	
     public static void main( String[] args ) {
 		
-    	//TODO: load files from database
-		File[] read = {new File("example.json")};
+    	File packsDir = new File("packs");
+    	if(!packsDir.exists()) {
+    		packsDir.mkdir();
+    	}
+    	
+    	//TODO: load files from database onto disk
+    	
+    	
+    	
+    	//load files from disk
+		File[] read = packsDir.listFiles();
 		Datapack[] packs = new Datapack[read.length];
 		
 		
-		//parse JSON of each datapack
+		
+		//read JSON of each datapack
 		for(int e = 0; e < read.length; e++) {
 			packs[e] = ParseJson.parse(read[e]);
 		}
